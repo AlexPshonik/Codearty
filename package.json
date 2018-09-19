@@ -1,0 +1,39 @@
+{
+  "name": "front-end-bleuprint",
+  "version": "1.0.0",
+  "description": "Front-end starter blueprint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://SashaPshonik@bitbucket.org/SashaPshonik/front-end-blueprint.git"
+  },
+  "author": "Alex Pshonik (CodeArty)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/SashaPshonik/front-end-blueprint#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.24.7",
+    "css-mqpacker": "^5.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.7",
+    "lost": "^7.1.0",
+    "postcss-csso": "^2.0.0",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.2.1"
+  }
+}

@@ -1,0 +1,50 @@
+// Responsive break-points
+=r($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+=xs
+  +r(480)
+    @content
+
+=sm
+  +r(576)
+    @content
+
+=md
+  +r(768)
+    @content
+
+=lg
+  +r(992)
+    @content
+
+=xl
+  +r(1200)
+    @content
+
+// font-size
+=fz($sizeValue: 16)
+  font-size: $sizeValue + px
+  font-size: $sizeValue / 10 + rem
+
+// vertical-align at center
+=center($axis)
+  position: absolute
+  @if $axis == both
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+  @else if $axis == h
+        left: 50%
+        transform: translateX(-50%)
+
+  @else if $axis == v
+        top: 50%
+        transform: translateY(-50%)
+
+// pseudo element
+=pseudo($content)
+  position: absolute
+  display: block
+  content: $content
