@@ -7,40 +7,46 @@ block content
   .container
     .row
       .col-12
-        h1.title
-          | We build creative
-          br
-          | product & services
-        p.subtitle We turn technologies and design into a solution for your business
-        button.btn Send request
+        .home-text
+          h1.home-text__title
+            | We build creative
+            br
+            | product & services
+          p.home-text__subtitle We turn technologies and design into a solution for your business
+          button.btn Send request
   .pop-up
-    span.pop-up__close
     .container
       .row
         .col-12
-          h2.list-form__title Discuss your project
-          p.list-form__subtitle Go ahead, great things start with filling out this contact form
+          span.pop-up__close
+          h2.pop-up__title Discuss your project
+          p.pop-up__subtitle Go ahead, great things start with filling out this contact form
         .col-12
           .list-form
             .row
               .col-12.col-md-6
-                label(for='name')
-                  | Your name
-                  span *
-                input(type='text')#name.list-form__name
+                .list-form__field
+                  label(for='name').list-form__label
+                    | Your name
+                    span *
+                  input(type='text')#name.list-form__name
               .col-12.col-md-6
-                label(for='email')
-                  | Email address
-                  span *
-                input(type='email')#email.list-form__email
+                .list-form__field
+                  label(for='email').list-form__label
+                    | Email address
+                    span *
+                  input(type='email')#email.list-form__email
               .col-12.col-md-6
-                label(for='phone') Phone (optional)
-                input(type='phone')#phone.list-form__phone
+                .list-form__field
+                  label(for='phone').list-form__label Phone (optional)
+                  input(type='phone')#phone.list-form__phone
               .col-12.col-md-6
-                label(for='company') Company
-                input(type='text')#company.list-form__company
+                .list-form__field
+                  label(for='company').list-form__label Company
+                  input(type='text')#company.list-form__company
               .col-12
-                label(for='idea') Tell us about your idea
-                textarea#idea.list-form__idea
+                .list-form__field
+                  label(for='idea').list-form__label Tell us about your idea
+                  textarea(rows='1')#idea.list-form__idea
               .col-12
                 button.btn.btn-secondary Send request

@@ -1,0 +1,47 @@
+html,
+body
+  position: relative
+  width: 100%
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  line-height: 1.65
+  font-family: $default-font
+  font-weight: 400
+  color: $main-font-color
+
+*
+  outline: none
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+  transition: all 0.3s ease 0s
+  &:hover
+    text-decoration: none
+
+ul
+  list-style-type: none
+
+button,
+input
+  box-shadow: none
+  border: none
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration
+  display: none

@@ -1,0 +1,53 @@
+.pop-up
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: none
+  align-items: center
+  background-color: #fff
+  text-align: center
+  &__title
+    margin-bottom: 48px
+    +fz(54)
+    line-height: 1.67
+  &__subtitle
+    +fz(22)
+    line-height: 1.2
+  &__close
+    position: relative
+    float: right
+    display: block
+    width: 28px
+    height: 28px
+    cursor: pointer
+    &::before,
+    &::after
+      +pseudo('')
+      width: 100%
+      height: 2px
+      background-color: $grey-color
+      border-radius: 1px
+    &::before
+      top: 47%
+      transform: rotate(45deg)
+    &::after
+      bottom: 46%
+      transform: rotate(-45deg)
+
+.list-form
+  margin-top: 86px
+  &__field
+    position: relative
+  &__label
+    position: absolute
+    +fz(20)
+    span
+      color: red
+  input,
+  textarea
+    width: 100%
+    padding: 12px 0
+    margin-bottom: 85px
+    +fz(20)

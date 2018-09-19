@@ -19,8 +19,8 @@
             </div>
             <div class="col-6">
               <div class="lang-sw">
-                <div class="lang-sw__item"><span>En</span></div>
-                <div class="lang-sw__item"><span>Ru</span></div>
+                <div class="lang-sw__item active"><a class="lang-sw__link" href="#"><span>En</span></a></div>
+                <div class="lang-sw__item"><a class="lang-sw__link" href="#"><span>Ru</span></a></div>
               </div>
             </div>
           </div>
@@ -29,41 +29,53 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="title">We build creative<br>product & services</h1>
-            <p class="subtitle">We turn technologies and design into a solution for your business</p>
-            <button class="btn">Send request</button>
+            <div class="home-text">
+              <h1 class="home-text__title">We build creative<br>product & services</h1>
+              <p class="home-text__subtitle">We turn technologies and design into a solution for your business</p>
+              <button class="btn">Send request</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="pop-up"><span class="pop-up__close"></span>
+      <div class="pop-up">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <h2 class="list-form__title">Discuss your project</h2>
-              <p class="list-form__subtitle">Go ahead, great things start with filling out this contact form</p>
+            <div class="col-12"><span class="pop-up__close"></span>
+              <h2 class="pop-up__title">Discuss your project</h2>
+              <p class="pop-up__subtitle">Go ahead, great things start with filling out this contact form</p>
             </div>
             <div class="col-12">
               <div class="list-form">
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <label for="name">Your name<span>*</span></label>
-                    <input class="list-form__name" type="text" id="name">
+                    <div class="list-form__field">
+                      <label class="list-form__label" for="name">Your name<span>*</span></label>
+                      <input class="list-form__name" type="text" id="name">
+                    </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="email">Email address<span>*</span></label>
-                    <input class="list-form__email" type="email" id="email">
+                    <div class="list-form__field">
+                      <label class="list-form__label" for="email">Email address<span>*</span></label>
+                      <input class="list-form__email" type="email" id="email">
+                    </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="phone">Phone (optional)</label>
-                    <input class="list-form__phone" type="phone" id="phone">
+                    <div class="list-form__field">
+                      <label class="list-form__label" for="phone">Phone (optional)</label>
+                      <input class="list-form__phone" type="phone" id="phone">
+                    </div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <label for="company">Company</label>
-                    <input class="list-form__company" type="text" id="company">
+                    <div class="list-form__field">
+                      <label class="list-form__label" for="company">Company</label>
+                      <input class="list-form__company" type="text" id="company">
+                    </div>
                   </div>
                   <div class="col-12">
-                    <label for="idea">Tell us about your idea</label>
-                    <textarea class="list-form__idea" id="idea"></textarea>
+                    <div class="list-form__field">
+                      <label class="list-form__label" for="idea">Tell us about your idea</label>
+                      <textarea class="list-form__idea" rows="1" id="idea"></textarea>
+                    </div>
                   </div>
                   <div class="col-12">
                     <button class="btn btn-secondary">Send request</button>
