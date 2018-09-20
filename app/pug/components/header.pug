@@ -3,12 +3,10 @@ header.site-header
     .row
       .col-6
         .logo
-          a(href='#').logo__link logo
+          a(href='#').logo__link
+            img(src='img/logo.svg').logo__img
       .col-6
         .lang-sw
-          .lang-sw__item.active
-            a(href='#').lang-sw__link
-              span En
-          .lang-sw__item
-            a(href='#').lang-sw__link
-              span Ru
+          select
+            option(selected) English
+            option Russian
