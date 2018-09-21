@@ -35,5 +35,8 @@
     "postcss-csso": "^2.0.0",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }

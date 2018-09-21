@@ -1,4 +1,7 @@
-// example of simple includes for js
-//=include libs/sayHello.js
+$('.js-show-popup').on('click', function () {
+  $('.pop-up').css('display', 'flex');
+});
 
-sayHello();
+$('.js-popup-close').on('click', function () {
+  $('.pop-up').css('display', 'none');
+});
