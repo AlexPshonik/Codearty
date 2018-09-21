@@ -4,14 +4,14 @@
   left: 0
   width: 100%
   height: 100%
-  display: none
+  display: flex
   align-items: center
   background-color: #fff
   text-align: center
   &__title
-    margin-bottom: 48px
+    margin: 40px 0
     +fz(54)
-    line-height: 1.67
+    line-height: 1.2
   &__subtitle
     +fz(22)
     line-height: 1.2
@@ -37,17 +37,20 @@
       transform: rotate(-45deg)
 
 .list-form
-  margin-top: 86px
+  margin-top: 68px
   &__field
     position: relative
   &__label
     position: absolute
-    +fz(20)
+    top: 14px
     span
       color: red
   input,
   textarea
     width: 100%
-    padding: 12px 0
-    margin-bottom: 85px
+    padding: 8px 0
+    margin-bottom: 65px
+    border: 1px solid red
     +fz(20)
+  textarea
+    padding: 10px 0
