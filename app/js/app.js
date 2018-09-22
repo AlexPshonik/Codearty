@@ -1,11 +1,4 @@
-$('.js-show-popup').on('click', function () {
-  $('.pop-up').css('display', 'flex');
-});
-
-$('.js-popup-close').on('click', function () {
-  $('.pop-up').css('display', 'none');
-});
-
+// Typing text
 let TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -56,3 +49,67 @@ window.onload = function() {
     new TxtType(element[0], JSON.parse(toRotate), period);
   }
 };
+
+var popupTimeline = anime.timeline();
+$('.js-show-popup').on('click', function () {
+  anime({
+    targets: '.pop-up',
+    translateY: 0,
+    opacity: 1,
+    easing: 'linear',
+    duration: 500
+  });
+  anime({
+    targets: '.list-form .list-form__field',
+    translateY: 0,
+    opacity: 1,
+    easing: 'linear',
+    duration: 500,
+    delay: 500
+  });
+  anime({
+    targets: '.list-form .btn',
+    translateY: 0,
+    opacity: 1,
+    easing: 'linear',
+    duration: 500,
+    delay: 1000
+  });
+});
+
+$('.js-popup-close').on('click', function () {
+  anime({
+    targets: '.pop-up',
+    translateY: '-100%',
+    opacity: 0,
+    easing: 'linear',
+    duration: 500
+  });
+  anime({
+    targets: '.list-form .list-form__field',
+    translateY: -150,
+    opacity: 0.4,
+    easing: 'linear',
+    duration: 500
+    // delay: 500
+  });
+  anime({
+    targets: '.list-form .btn',
+    translateY: 50,
+    opacity: 0,
+    easing: 'linear',
+    duration: 500
+    // delay: 1000
+  });
+});
+
+$(document).ready(function () {
+  $('.pop-up').css('transform', 'translateY(-100%)');
+  $('.pop-up').css('opacity', '1');
+  $('.list-form .list-form__field').each(function () {
+    $(this).css('transform', 'translateY(-150px)');
+    $(this).css('opacity', '0.4');
+  });
+  $('.list-form .btn').css('transform', 'translateY(150px)');
+  $('.list-form .btn').css('opacity', '0');
+});

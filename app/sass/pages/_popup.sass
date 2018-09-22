@@ -5,20 +5,28 @@
   width: 100%
   height: auto
   min-height: 100%
-  padding: 40px 0
-  display: none
+  padding: 60px 0
+  display: flex
   align-items: center
   background-color: #fff
   text-align: center
+  transform: translateY(-100%)
   &__title
-    margin: 50px 0 20px
+    margin: 50px 0 0
+    padding-bottom: 20px
     +fz(44)
     line-height: 1.2
     +md
-      margin: 40px 0
+      margin: 40px 0 0
+      padding-bottom: 40px
       +fz(54)
   &__subtitle
     line-height: 1.2
+  &__title,
+  &__subtitle
+    position: relative
+    background-color: #fff
+    z-index: 2
   &__close
     position: relative
     float: right
@@ -66,3 +74,6 @@
   textarea
     padding: 10px 0
     margin-bottom: 40px
+  .btn
+    transform: translateY(50px)
+    opacity: 0
