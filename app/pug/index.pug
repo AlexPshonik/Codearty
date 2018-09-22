@@ -9,10 +9,12 @@ block content
       .row
         .col-12
           .home-text__wrapper
-            h1.home-text__title
-              | We build creative
-              br
-              | product & services
+            h1(data-period='2000' data-type='[" digital products & services",' +
+            '" digital products & services"]').home-text__title.js-typed-text
+             | We build
+             br
+             | &nbsp;
+             span.wrap
             p.home-text__subtitle We turn technologies and design into a solution for your business
             button.btn.js-show-popup Send request
   .pop-up
