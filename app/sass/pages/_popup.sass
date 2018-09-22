@@ -3,17 +3,21 @@
   top: 0
   left: 0
   width: 100%
-  height: 100%
+  height: auto
+  min-height: 100%
+  padding: 40px 0
   display: none
   align-items: center
   background-color: #fff
   text-align: center
   &__title
-    margin: 40px 0
-    +fz(54)
+    margin: 50px 0 20px
+    +fz(44)
     line-height: 1.2
+    +md
+      margin: 40px 0
+      +fz(54)
   &__subtitle
-    +fz(22)
     line-height: 1.2
   &__close
     position: relative
@@ -35,9 +39,15 @@
     &::after
       bottom: 46%
       transform: rotate(-45deg)
+    +lg
+      margin-right: calc(100% / 12 + 30px)
 
 .list-form
-  margin-top: 68px
+  margin-top: 35px
+  +md
+    margin-top: 68px
+  +lg
+    padding: 0 100%/12*2
   &__field
     position: relative
   &__label
@@ -48,8 +58,11 @@
   input,
   textarea
     width: 100%
+    margin-bottom: 25px
     padding: 8px 0
-    margin-bottom: 65px
     +fz(20)
+    +md
+      margin-bottom: 65px
   textarea
     padding: 10px 0
+    margin-bottom: 40px
