@@ -4,17 +4,24 @@ var browserSynk   = require('browser-sync');
 var babel         = require('gulp-babel');
 var sourcemaps    = require('gulp-sourcemaps');
 var uglify        = require('gulp-uglify');
+var minify         = require('gulp-minify');
 var rename        = require('gulp-rename');
 var config        = require('../config');
 reload = browserSynk.reload;
 
 gulp.task('js', function () {
   gulp.src(config.src.js+'/**/*.js')
-    .pipe(rename({ suffix: '.min', prefix : '' }))
+    // .pipe(rename({ suffix: '.min', prefix : '' }))
     .pipe(sourcemaps.init())
-    .pipe(include())
-    .pipe(babel())
-    .pipe(uglify())
+    // .pipe(include())
+    // .pipe(babel())
+    // .pipe(uglify())
+    .pipe(minify({
+      ext:{
+        src:'.js',
+        min:'.min.js'
+      }
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest.js+'/'))
     .pipe(reload({stream: true}));
