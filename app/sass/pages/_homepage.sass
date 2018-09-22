@@ -8,15 +8,23 @@ body
   display: flex
   align-items: center
   height: 100%
+  padding-top: 40px
+  +xs
+    padding-top: 0
   &__wrapper
     text-align: center
   &__title
-    display: none
     margin-bottom: 40px
-    +fz(60)
+    +fz(43)
     line-height: 1.13
     color: #ffffff
+    +sm
+      +fz(51)
+    +md
+      +fz(60)
   &__subtitle
-    margin-bottom: 78px
+    margin-bottom: 40px
     line-height: 1.2
     color: #ffffff
+    +xs
+      margin-bottom: 78px
