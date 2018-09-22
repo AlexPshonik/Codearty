@@ -58,22 +58,31 @@
     padding: 0 100%/12*2
   &__field
     position: relative
+    &.fill
+      .list-form__input
+        border-bottom-color: $accent-blue-color
   &__label
     position: absolute
-    top: 14px
+    left: 0
+    transform: translateY(14px)
     span
       color: red
-  input,
-  textarea
+  label[for='idea']
+    top: -4px
+  &__input
     width: 100%
     margin-bottom: 25px
     padding: 8px 0
+    transition: border-bottom-color 0.3s ease
+    & textarea
+      padding: 10px 0
+      margin-bottom: 40px
+    &:focus,
+    &.fill
+      border-bottom-color: $accent-blue-color
     +fz(20)
     +md
       margin-bottom: 65px
-  textarea
-    padding: 10px 0
-    margin-bottom: 40px
   .btn
     transform: translateY(50px)
     opacity: 0
