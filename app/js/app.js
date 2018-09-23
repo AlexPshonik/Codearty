@@ -49,6 +49,7 @@ $(document).ready(function() {
 });
 // Popup animation
 $('.js-show-popup').on('click', function () {
+  $('#homepage-bg-animation').css('display', 'none');
   anime({
     targets: '.pop-up',
     translateY: 0,
@@ -74,6 +75,7 @@ $('.js-show-popup').on('click', function () {
   });
 });
 $('.js-popup-close').on('click', function () {
+  $('#homepage-bg-animation').css('display', 'block');
   anime({
     targets: '.pop-up',
     translateY: '-100%',
