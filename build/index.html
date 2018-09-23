@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta charset="utf-8"><!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/app.min.css">
@@ -15,7 +14,7 @@
         <div class="container">
           <div class="row">
             <div class="col-6">
-              <div class="logo"><a class="logo__link" href="#"><img class="logo__img" src="img/logotype.svg"></a></div>
+              <div class="logo"><a class="logo__link" href="#"><img class="logo__img" src="img/logotype.svg" alt="CodeArty logo"></a></div>
             </div>
             <div class="col-6">
               <div class="lang-sw">
@@ -69,7 +68,7 @@
                   <div class="col-12 col-md-6">
                     <div class="list-form__field">
                       <label class="list-form__label" for="phone">Phone (optional)</label>
-                      <input class="list-form__phone list-form__input" type="phone" id="phone">
+                      <input class="list-form__phone list-form__input" type="tel" pattern="[0-9]" id="phone">
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
