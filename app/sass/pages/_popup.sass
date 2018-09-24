@@ -34,6 +34,10 @@
     width: 28px
     height: 28px
     cursor: pointer
+    &:hover
+      &::after,
+      &::before
+        background-color: $main-font-color
     &::before,
     &::after
       +pseudo('')
@@ -62,6 +66,9 @@
     &.fill
       .list-form__input
         border-bottom-color: $accent-blue-color
+    &.focused
+      .list-form__label
+        color: $accent-blue-color
   &__label
     position: absolute
     left: 0
@@ -76,7 +83,7 @@
   &__input
     width: 100%
     margin-bottom: 25px
-    padding: 8px 0
+    padding: 10px 0
     transition: border-bottom-color 0.3s ease
     & textarea
       padding: 10px 0
@@ -86,7 +93,7 @@
       border-bottom-color: $accent-blue-color
     +fz(20)
     +md
-      margin-bottom: 65px
+      margin-bottom: 50px
   .btn
     transform: translateY(50px)
     opacity: 0

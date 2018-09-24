@@ -11,14 +11,12 @@ block content
       .row
         .col-12
           .home-text__wrapper
-            h1(data-period='2000' data-type='[" digital products & services",' +
-            '" digital products & services"]').home-text__title.js-typed-text
-             | We build
-             br
-             | &nbsp;
-             span.wrap
+            h1.home-text__title.js-typed-text
+              | We build digital
+              br
+              | products & services
             p.home-text__subtitle We turn technologies and design into a solution for your business
-            button.btn.js-show-popup Send request
+            button.btn.btn-default.button--isi.js-show-popup Send request
   .pop-up
     .container
       .row
@@ -54,4 +52,4 @@ block content
                   label(for='idea').list-form__label Tell us about your idea
                   textarea(rows='1')#idea.list-form__idea.list-form__input
               .col-12
-                button.btn.btn-secondary Submit
+                button.btn.btn-primary Submit
