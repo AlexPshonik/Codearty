@@ -156,6 +156,7 @@ var mDuration = 20;
 
 window.onload = function () {
   init();
+  rotate();
 };
 
 function init() {
@@ -165,6 +166,7 @@ function init() {
 
   requestAnimationFrame(tick);
   window.addEventListener('resize', resize, false);
+  window.addEventListener('orientationchange', rotate, false);
 }
 function initTHREE() {
   mRenderer = new THREE.WebGLRenderer({antialias: true});
@@ -375,10 +377,13 @@ function render() {
   mRenderer.render(mScene, mCamera);
 }
 function resize() {
-  mCamera.aspect = window.innerWidth / window.innerHeight;
+  let width = $('.wrapper').width(),
+      height = $('.wrapper').height();
+
+  mCamera.aspect = width / height;
   mCamera.updateProjectionMatrix();
 
-  mRenderer.setSize(window.innerWidth, window.innerHeight);
+  mRenderer.setSize(width, height);
 }
 
 /////////////////////////////
