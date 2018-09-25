@@ -12,7 +12,6 @@ reload = browserSynk.reload;
 gulp.task('js', function () {
   gulp.src(config.src.js+'/**/*.js')
     // .pipe(rename({ suffix: '.min', prefix : '' }))
-    .pipe(sourcemaps.init())
     // .pipe(include())
     // .pipe(babel())
     // .pipe(uglify())
@@ -22,7 +21,6 @@ gulp.task('js', function () {
         min:'.min.js'
       }
     }))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest.js+'/'))
     .pipe(reload({stream: true}));
 });
