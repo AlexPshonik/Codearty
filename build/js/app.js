@@ -120,13 +120,13 @@ function init() {
 }
 function initTHREE() {
   mRenderer = new THREE.WebGLRenderer({antialias: true});
-  mRenderer.setSize(window.innerWidth, window.innerHeight);
+  mRenderer.setSize($('.wrapper').width(), $('.wrapper').height());
   mRenderer.setClearColor(0x304ffe);
 
   mContainer = document.getElementById('homepage-bg-animation');
   mContainer.appendChild(mRenderer.domElement);
 
-  mCamera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 5000);
+  mCamera = new THREE.PerspectiveCamera(60, $('.wrapper').width() / $('.wrapper').height(), 0.1, 5000);
   mCamera.position.set(-1300, 0, 0);
 
   mScene = new THREE.Scene();
@@ -138,6 +138,7 @@ function initTHREE() {
 }
 function initControls() {
   mControls = new THREE.OrbitControls(mCamera, mRenderer.domElement);
+  mControls.enabled = false;
 }
 function initParticleSystem() {
   var prefabGeometry = new THREE.PlaneGeometry(4, 4);
