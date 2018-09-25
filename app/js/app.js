@@ -9,55 +9,68 @@ $('.js-show-popup').on('click', function () {
     duration: 350
   });
   anime({
+    targets: '.pop-up__bg',
+    opacity: 1,
+    easing: 'linear',
+    duration: 300,
+    delay: 500
+  });
+  anime({
+    targets: ['.pop-up__title', '.pop-up__subtitle'],
+    opacity: 1,
+    easing: 'linear',
+    duration: 200,
+    delay: 800
+  });
+  anime({
     targets: '.list-form .list-form__field',
     translateY: 0,
     opacity: 1,
     easing: 'linear',
     duration: 400,
-    delay: 600
+    delay: 700
   });
   anime({
     targets: '.list-form .btn',
-    translateY: 0,
     opacity: 1,
     easing: 'linear',
     duration: 400,
-    delay: 1000
+    delay: 1100
   });
 });
 $('.js-popup-close').on('click', function () {
   $('#homepage-bg-animation').css('display', 'block');
   anime({
     targets: '.pop-up',
-    translateY: '-100%',
+    translateY: '100%',
+    opacity: 0,
+    easing: 'linear',
+    delay: 600,
+    duration: 200
+  });
+  anime({
+    targets: ['.pop-up__title', '.pop-up__subtitle'],
     opacity: 0,
     easing: 'linear',
     duration: 200
   });
   anime({
     targets: '.list-form .list-form__field',
-    translateY: -150,
-    opacity: 0.4,
+    opacity: 0,
     easing: 'linear',
-    duration: 500
+    duration: 300
   });
   anime({
     targets: '.list-form .btn',
-    translateY: 50,
     opacity: 0,
     easing: 'linear',
-    duration: 500
+    duration: 300
   });
 });
 $(document).ready(function () {
-  $('.pop-up').css('transform', 'translateY(-100%)');
+  $('.pop-up').css('transform', 'translateY(100%)');
   $('.pop-up').css('opacity', '1');
-  $('.list-form .list-form__field').each(function () {
-    $(this).css('transform', 'translateY(-150px)');
-    $(this).css('opacity', '0.4');
-  });
-  $('.list-form .btn').css('transform', 'translateY(150px)');
-  $('.list-form .btn').css('opacity', '0');
+  $(['.pop-up__title', '.pop-up__subtitle', '.list-form .list-form__field', '.list-form .btn'].join(", ")).css('opacity', '0');
 });
 // Field label animation
 $(document).ready(function () {

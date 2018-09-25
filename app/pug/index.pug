@@ -15,11 +15,13 @@ block content
               br
               | products & services
             p.home-text__subtitle We turn technologies and design into a solution for your business
-            button.btn.btn-default.button--isi.js-show-popup Send request
+            button.btn.btn-default.button--isi.js-show-popup Start the project
   .pop-up
     .container
       .row
         .col-12
+          .pop-up__bg
+            span.pop-up__bg-text Hello CodeArty
           span.pop-up__close.js-popup-close
           h2.pop-up__title Discuss your project
           p.pop-up__subtitle Go ahead, great things start with filling out this contact form
@@ -51,4 +53,4 @@ block content
                   label(for='idea').list-form__label Tell us about your idea
                   textarea(rows='1')#idea.list-form__idea.list-form__input
               .col-12
-                button.btn.btn-primary Submit
+                button.btn.btn-primary Send a message

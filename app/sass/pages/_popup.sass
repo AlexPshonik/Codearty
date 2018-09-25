@@ -11,6 +11,23 @@
   background-color: #fff
   text-align: center
   transform: translateY(-100%)
+  overflow: hidden
+  &__bg
+    &-text
+      font-size: 130px
+      font-weight: 700
+      letter-spacing: 2.5px
+      color: rgba(0,0,0,.02)
+      position: absolute
+      z-index: -1
+      bottom: -120px
+      left: 0
+      line-height: 1
+      white-space: nowrap
+      pointer-events: none
+      width: 100%
+      +md
+        font-size: 100px
   &__title
     margin: 50px 0 0
     padding-bottom: 20px
@@ -95,5 +112,5 @@
     +md
       margin-bottom: 50px
   .btn
-    transform: translateY(50px)
+    transform: translateY(30px)
     opacity: 0
