@@ -14,7 +14,7 @@
   overflow: hidden
   &__bg
     &-text
-      font-size: 130px
+      font-size: +fz(80)
       font-weight: 700
       letter-spacing: 2.5px
       color: rgba(0,0,0,.02)
@@ -29,28 +29,37 @@
       +md
         font-size: 100px
   &__title
-    margin: 50px 0 0
+    margin: 0
     padding-bottom: 20px
-    +fz(44)
+    +fz(22)
     line-height: 1.2
     +md
       margin: 40px 0 0
       padding-bottom: 30px
       +fz(54)
   &__subtitle
+    padding-right: 30px
+    +fz(14)
     line-height: 1.2
+    +md
+      +fz(16)
   &__title,
   &__subtitle
     position: relative
     background-color: #fff
+    text-align: left
     z-index: 2
+    +md
+      text-align: center
   &__close
     position: relative
+    top: -1px
     float: right
     display: block
     width: 28px
     height: 28px
     cursor: pointer
+    z-index: 3
     &:hover
       &::after,
       &::before
@@ -68,6 +77,8 @@
     &::after
       bottom: 46%
       transform: rotate(-45deg)
+    +md
+      top: 0  
     +lg
       margin-right: calc(100% / 12 + 30px)
 
