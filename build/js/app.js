@@ -68,7 +68,6 @@ $(document).ready(function(){
 // Popup animation
 $('.js-show-popup').on('click', function () {
   $('#homepage-bg-animation').css('display', 'none');
-  $('.wrapper').removeClass('overflow');
   anime({
     targets: '.pop-up',
     translateY: 0,
@@ -112,6 +111,9 @@ $('.js-show-popup').on('click', function () {
     duration: 400,
     delay: 1100
   });
+  setTimeout(function() {
+    $('.wrapper').removeClass('overflow');
+  }, 1850);
 });
 $('.js-popup-close').on('click', function () {
   $('#homepage-bg-animation').css('display', 'block');
