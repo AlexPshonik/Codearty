@@ -26,7 +26,7 @@ $(document).ready(function(){
       ru: "Email"
     },
     "Phone (optional)": {
-      ru: "Телефон (необязательный)"
+      ru: "Телефон (необязательно)"
     },
     "Company": {
       ru: "Компания"
