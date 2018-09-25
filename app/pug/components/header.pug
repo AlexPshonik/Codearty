@@ -6,7 +6,7 @@ header.site-header
           a(href='#').logo__link
             img(src='img/logotype.svg', alt='CodeArty logo').logo__img
       .col-6
-        .lang-sw
-          select
-            option(selected) English
-            option Русский
+        .lang-sw          
+          select.lang-sw__select
+            option.trn#lang-selector(data-value="en") English
+            option.trn#lang-selector(data-value="ru") Русский

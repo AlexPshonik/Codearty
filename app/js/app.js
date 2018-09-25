@@ -1,3 +1,54 @@
+// Translation
+$(document).ready(function(){
+  var dict = {
+    "We build digital<br>products &amp; services" : {
+      ru: "Мы разрабатываем <br>цифровые продукты и сервисы"
+    },
+    "We turn technologies and design into a solution for your business" : {
+      ru: "Превращаем технологии и дизайн в решения для Вашего бизнеса"
+    },
+    "Start the project": {
+      ru: "Запустить проект"
+    },
+    "Hello CodeArty": {
+      ru: "Привет CodeArty"
+    },
+    "Discuss your project": {
+      ru: "Обсудить проект"
+    },
+    "Go ahead, great things start with filling out this contact form": {
+      ru: "Крутые проекты начинаются с заполнения этой формы"
+    },
+    "Your name": {
+      ru: "Имя"
+    },
+    "Email address": {
+      ru: "Email"
+    },
+    "Phone (optional)": {
+      ru: "Телефон (необязательный)"
+    },
+    "Company": {
+      ru: "Компания"
+    },
+    "Tell us about your idea": {
+      ru: "Расскажите о своей идее"
+    },
+    "Submit": {
+      ru: "Оставить заявку"
+    },
+
+  }
+
+  var translator = $('body').translate({lang: "en", t: dict});
+  $('.lang-sw__select').change(function() {
+    $( "option:selected" ).each(function() {
+      var lang = $(this).attr("data-value");
+      translator.lang(lang);
+    });
+  });
+});
+
 // Popup animation
 $('.js-show-popup').on('click', function () {
   $('#homepage-bg-animation').css('display', 'none');
@@ -68,7 +119,6 @@ $('.js-popup-close').on('click', function () {
   });
 });
 $(document).ready(function () {
-  $('.pop-up').css('transform', 'translateY(100%)');
   $('.pop-up').css('opacity', '1');
   $(['.pop-up__title', '.pop-up__subtitle', '.list-form .list-form__field', '.list-form .btn'].join(", ")).css('opacity', '0');
 });

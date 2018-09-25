@@ -17,10 +17,10 @@
               <div class="logo"><a class="logo__link" href="#"><img class="logo__img" src="img/logotype.svg" alt="CodeArty logo"></a></div>
             </div>
             <div class="col-6">
-              <div class="lang-sw">
-                <select>
-                  <option selected>English</option>
-                  <option>Русский</option>
+              <div class="lang-sw">         
+                <select class="lang-sw__select">
+                  <option class="trn" id="lang-selector" data-value="en">English</option>
+                  <option class="trn" id="lang-selector" data-value="ru">Русский</option>
                 </select>
               </div>
             </div>
@@ -33,9 +33,9 @@
           <div class="row">
             <div class="col-12">
               <div class="home-text__wrapper">
-                <h1 class="home-text__title js-typed-text">We build digital<br>products & services</h1>
-                <p class="home-text__subtitle">We turn technologies and design into a solution for your business</p>
-                <button class="btn btn-default button--isi js-show-popup">Start the project</button>
+                <h1 class="home-text__title js-typed-text trn">We build digital<br>products & services</h1>
+                <p class="home-text__subtitle trn">We turn technologies and design into a solution for your business</p>
+                <button class="btn btn-default button--isi js-show-popup trn">Start the project</button>
               </div>
             </div>
           </div>
@@ -45,45 +45,45 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="pop-up__bg"><span class="pop-up__bg-text">Hello CodeArty</span></div><span class="pop-up__close js-popup-close"></span>
-              <h2 class="pop-up__title">Discuss your project</h2>
-              <p class="pop-up__subtitle">Go ahead, great things start with filling out this contact form</p>
+              <div class="pop-up__bg"><span class="pop-up__bg-text trn">Hello CodeArty</span></div><span class="pop-up__close js-popup-close"></span>
+              <h2 class="pop-up__title trn">Discuss your project</h2>
+              <p class="pop-up__subtitle trn">Go ahead, great things start with filling out this contact form</p>
             </div>
             <div class="col-12">
               <div class="list-form">
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="list-form__field">
-                      <label class="list-form__label" for="name">Your name<span>*</span></label>
+                      <label class="list-form__label trn" for="name">Your name</label>
                       <input class="list-form__name list-form__input" type="text" id="name">
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="list-form__field">
-                      <label class="list-form__label" for="email">Email address<span>*</span></label>
+                      <label class="list-form__label trn" for="email">Email address</label>
                       <input class="list-form__email list-form__input" type="email" id="email">
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="list-form__field">
-                      <label class="list-form__label" for="phone">Phone (optional)</label>
+                      <label class="list-form__label trn" for="phone">Phone (optional)</label>
                       <input class="list-form__phone list-form__input" type="tel" pattern="[0-9]" id="phone">
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="list-form__field">
-                      <label class="list-form__label" for="company">Company</label>
+                      <label class="list-form__label trn" for="company">Company</label>
                       <input class="list-form__company list-form__input" type="text" id="company">
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="list-form__field">
-                      <label class="list-form__label" for="idea">Tell us about your idea</label>
+                      <label class="list-form__label trn" for="idea">Tell us about your idea</label>
                       <textarea class="list-form__idea list-form__input" rows="1" id="idea"></textarea>
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary">Send a message</button>
+                    <button class="btn btn-primary trn">Submit</button>
                   </div>
                 </div>
               </div>
@@ -96,6 +96,7 @@
     <script src="js/libs/anime.min.js"></script>
     <script src="js/libs/three.min.js"></script>
     <script src="js/libs/orbitControls.min.js"></script>
+    <script src="js/libs/jquery.translate.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>
