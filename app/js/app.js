@@ -1,14 +1,14 @@
 // Translation
 $(document).ready(function(){
   var dict = {
-    "We build digital<br>products &amp; services" : {
-      ru: "Мы разрабатываем <br>цифровые продукты и сервисы"
+    "Grow your<br>business with us" : {
+      ru: "Развивайте свой <br>бизнес вместе с нами"
     },
-    "We turn technologies and design into a solution for your business" : {
-      ru: "Превращаем технологии и дизайн в решения для Вашего бизнеса"
+    "It seems like you are looking for a top-notch, unique and high-performance website. <br> We are ready. Are you?" : {
+      ru: "Похоже, вы ищете первоклассный, уникальный и высокопроизводительный веб-сайт. <br> Мы готовы. А Вы?"
     },
-    "Start the project": {
-      ru: "Запустить проект"
+    "Hire us": {
+      ru: "Нанять нас"
     },
     "Hello CodeArty": {
       ru: "Привет CodeArty"
@@ -34,8 +34,8 @@ $(document).ready(function(){
     "Tell us about your idea": {
       ru: "Расскажите о своей идее"
     },
-    "Submit": {
-      ru: "Оставить заявку"
+    "Send": {
+      ru: "Отправить"
     }
   }
 
@@ -74,6 +74,13 @@ $('.js-show-popup').on('click', function () {
     opacity: 1,
     easing: 'linear',
     duration: 350
+  });
+  anime({
+    targets: '.pop-up__close',
+    opacity: 1,
+    easing: 'linear',
+    duration: 200,
+    delay: 1400
   });
   anime({
     targets: '.pop-up__bg',
@@ -116,6 +123,10 @@ $('.js-popup-close').on('click', function () {
     duration: 200
   });
   anime({
+    targets: '.pop-up__close',
+    opacity: 0
+  });
+  anime({
     targets: ['.pop-up__title', '.pop-up__subtitle'],
     opacity: 0,
     easing: 'linear',
@@ -136,7 +147,7 @@ $('.js-popup-close').on('click', function () {
 });
 $(document).ready(function () {
   $('.pop-up').css('opacity', '1');
-  $(['.pop-up__title', '.pop-up__subtitle', '.list-form .list-form__field', '.list-form .btn'].join(", ")).css('opacity', '0');
+  $(['.pop-up__close','.pop-up__title', '.pop-up__subtitle', '.list-form .list-form__field', '.list-form .btn'].join(", ")).css('opacity', '0');
 });
 // Field label animation
 $(document).ready(function () {
