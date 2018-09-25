@@ -68,6 +68,7 @@ $(document).ready(function(){
 // Popup animation
 $('.js-show-popup').on('click', function () {
   $('#homepage-bg-animation').css('display', 'none');
+  $('.wrapper').removeClass('overflow');
   anime({
     targets: '.pop-up',
     translateY: 0,
@@ -114,6 +115,7 @@ $('.js-show-popup').on('click', function () {
 });
 $('.js-popup-close').on('click', function () {
   $('#homepage-bg-animation').css('display', 'block');
+  $('.wrapper').addClass('overflow');
   anime({
     targets: '.pop-up',
     translateY: '100%',
@@ -146,6 +148,7 @@ $('.js-popup-close').on('click', function () {
   });
 });
 $(document).ready(function () {
+  $('.wrapper').addClass('overflow');
   $('.pop-up').css('opacity', '1');
   $(['.pop-up__close','.pop-up__title', '.pop-up__subtitle', '.list-form .list-form__field', '.list-form .btn'].join(", ")).css('opacity', '0');
 });
