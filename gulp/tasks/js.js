@@ -3,26 +3,29 @@ var include       = require('gulp-include');
 var browserSynk   = require('browser-sync');
 var babel         = require('gulp-babel');
 var sourcemaps    = require('gulp-sourcemaps');
-var uglify        = require('gulp-uglify');
-var minify         = require('gulp-minify');
+var concat        = require('gulp-concat');
+var minify        = require('gulp-minify');
 var rename        = require('gulp-rename');
 var config        = require('../config');
-reload = browserSynk.reload;
 
-gulp.task('js', function () {
-  gulp.src(config.src.js+'/**/*.js')
-    // .pipe(rename({ suffix: '.min', prefix : '' }))
-    // .pipe(include())
-    // .pipe(babel())
-    // .pipe(uglify())
-    .pipe(minify({
-      ext:{
-        src:'.js',
-        min:'.min.js'
-      }
-    }))
-    .pipe(gulp.dest(config.dest.js+'/'))
-    .pipe(reload({stream: true}));
+gulp.task('js', function() {
+	return gulp.src([
+    'app/js/libs/jquery.js',
+    'app/js/libs/anime.js',
+    'app/js/libs/three.js',
+    'app/js/libs/orbitControls.js',
+    'app/js/libs/jquery.translate.js',
+		'app/js/app.js', // Always at the end
+		])
+	.pipe(concat('scripts.js'))
+	.pipe(minify({
+    ext:{
+      src:'.js',
+      min:'.min.js'
+    }
+  }))
+	.pipe(gulp.dest(config.dest.js+'/'))
+	.pipe(browserSynk.reload({ stream: true }))
 });
 
 gulp.task('js:watch', function () {
