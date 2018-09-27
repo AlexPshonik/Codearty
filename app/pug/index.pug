@@ -32,17 +32,17 @@ block content
             input(type="hidden" name="form_subject" value="Get a quote form")
             .list-form__field
               label(for='name').list-form__label.trn Your name
-              input(type='text')#name.list-form__name.list-form__input
+              input(type='text' name="project_name" required)#name.list-form__name.list-form__input
             .list-form__field
               label(for='email').list-form__label.trn Email address
-              input(type='email')#email.list-form__email.list-form__input
+              input(type='email' name="admin_email" required)#email.list-form__email.list-form__input
             .list-form__field
               label(for='phone').list-form__label.trn Phone (optional)
-              input(type='text', pattern="[0-9]")#phone.list-form__phone.list-form__input
+              input(type='text' name="customer_number" pattern="[0-9]")#phone.list-form__phone.list-form__input
             .list-form__field
               label(for='company').list-form__label.trn Company
-              input(type='text')#company.list-form__company.list-form__input
+              input(type='text' name="customer_company")#company.list-form__company.list-form__input
             .list-form__field
               label(for='idea').list-form__label.trn Tell us about your idea
-              textarea(rows='1')#idea.list-form__idea.list-form__input
+              textarea(rows='1' name="form_subject")#idea.list-form__idea.list-form__input
             button.btn.btn-primary.trn Send
