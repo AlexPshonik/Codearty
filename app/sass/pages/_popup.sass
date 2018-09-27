@@ -84,22 +84,13 @@
 
 
 .list-form
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
   margin-top: 35px
   +md
-    justify-content: space-between
     margin-top: 68px
   +lg
     padding: 0 100%/12*2
   &__field
     position: relative
-    width: 100%
-    +md
-      width: 48%
-      &:last-child
-        width: 100%
     &.fill
       .list-form__input
         border-bottom-color: $accent-blue-color
@@ -134,5 +125,3 @@
   .btn
     transform: translateY(30px)
     opacity: 0
-    +md
-      margin: 0 auto
