@@ -13,15 +13,16 @@ body
   position: absolute
   top: 0
   left: 0
-  z-index: -1
   canvas
     position: absolute
 
 .home-text
+  position: relative
   display: flex
   align-items: center
   margin: 40px 0
   flex-grow: 1
+  z-index: 2
   +xs
     padding-top: 0
   &__wrapper
@@ -44,3 +45,6 @@ body
     +xs
       margin-bottom: 78px
       +fz(16)
+  .btn
+    position: relative
+    z-index: 2    

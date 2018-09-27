@@ -1,6 +1,6 @@
 var gulp          = require('gulp');
 var include       = require('gulp-include');
-var browserSynk   = require('browser-sync');
+var browserSync   = require('browser-sync');
 var babel         = require('gulp-babel');
 var sourcemaps    = require('gulp-sourcemaps');
 var concat        = require('gulp-concat');
@@ -25,7 +25,7 @@ gulp.task('js', function() {
     }
   }))
 	.pipe(gulp.dest(config.dest.js+'/'))
-	.pipe(browserSynk.reload({ stream: true }))
+	.pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('js:watch', function () {
