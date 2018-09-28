@@ -52,7 +52,7 @@ $(document).ready(function(){
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "https://stage.codearty.com/mail.php",
+			url: "../mail.php",
 			data: th.serialize()
 		}).done(function() {
 			alert("Thank you!");
